@@ -1,0 +1,4 @@
+scriptName: rugby.nf
+start: Thu Oct 18 12:20:22 PDT 2018
+runName: boring_solvay
+nextflow.version: 0.30.2
