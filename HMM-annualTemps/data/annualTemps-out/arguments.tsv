@@ -1,0 +1,42 @@
+model.nLatentStates	<optional>
+model.observations	<optional>
+model.states	<optional>
+model.initialDistribution.file	<parent optional>
+model.initialDistribution.nRows	<optional>
+model.initialDistribution.nCols	<optional>
+model.transitionProbabilities.file	<parent optional>
+model.transitionProbabilities.nRows	<optional>
+model.transitionProbabilities.nCols	<optional>
+model.emissionProbabilities.file	<parent optional>
+model.emissionProbabilities.nRows	<optional>
+model.emissionProbabilities.nCols	<optional>
+engine.nFinalRejuvenations	5
+engine.random	1
+engine.resamplingESSThreshold	0.5
+engine.temperatureSchedule.useConditional	true
+engine.temperatureSchedule.threshold	0.9999
+engine.resamplingScheme	STRATIFIED
+engine.nParticles	1_000
+engine.nThreads.fraction	0.5
+engine.nThreads.ignoreUtilizedCores	true
+engine.nThreads.verbose	false
+engine.silent	false
+engine.temperatureSchedule	AdaptiveTemperatureSchedule
+engine.nThreads	Dynamic
+printAccessibilityGraph	false
+checkIsDAG	true
+skipForwardSamplerConstruction	false
+initRandom	1
+excludeFromOutput	<optional>
+samplers.useAnnotation	true
+samplers.additional	<missing>
+samplers.excluded	<missing>
+version	<optional>
+experimentConfigs.managedExecutionFolder	true
+experimentConfigs.saveStandardStreams	true
+experimentConfigs.recordGitInfo	true
+experimentConfigs.recordExecutionInfo	true
+experimentConfigs.configFile	<optional>
+experimentConfigs.tabularWriter	CSV
+model	demo.annualTemps$Builder
+engine	SCM

@@ -1,0 +1,104 @@
+# --checkIsDAG <boolean> (default value: true)
+
+# --engine <PosteriorInferenceEngine: SCM|PT|Forward|Exact|None|fully qualified> (default value: SCM)
+
+# --engine.nFinalRejuvenations <int> (default value: 5)
+#   description: Number of rejuvenation passes to do after the change of measure.
+
+# --engine.nParticles <int> (default value: 1_000)
+
+# --engine.nThreads <Cores: Dynamic|Fixed|Max|fully qualified> (default value: Dynamic)
+
+# --engine.nThreads.fraction <double> (default value: 0.5)
+
+# --engine.nThreads.ignoreUtilizedCores <boolean> (default value: true)
+
+# --engine.nThreads.verbose <boolean> (default value: false)
+
+# --engine.random <Random> (default value: 1)
+#   description: Random seed used for proposals and resampling.
+
+# --engine.resamplingESSThreshold <double> (default value: 0.5)
+#   description: If the (relative) Effective Sample Size (ESS) falls below, perform a resampling round.
+
+# --engine.resamplingScheme <ResamplingScheme: STRATIFIED|MULTINOMIAL> (default value: STRATIFIED)
+
+# --engine.silent <boolean> (default value: false)
+#   description: Silence the progress report printed in standard out.
+
+# --engine.temperatureSchedule <TemperatureSchedule: AdaptiveTemperatureSchedule|FixedTemperatureSchedule|fully qualified> (default value: AdaptiveTemperatureSchedule)
+#   description: Algorithm selecting annealing parameter increments.
+
+# --engine.temperatureSchedule.threshold <double> (default value: 0.9999)
+#   description: Annealing parameter is selected to get the (conditional) ESS decrease specified by this parameter.
+
+# --engine.temperatureSchedule.useConditional <boolean> (default value: true)
+#   description: See Zhou, Johansen and Aston (2013).
+
+# --excludeFromOutput <List: Space separated items or "file <path>" to load from newline separated file> (optional)
+
+# --experimentConfigs.configFile <File> (optional)
+#   description: If set, use those arguments in provided file that do not appear in the provided arguments.
+
+# --experimentConfigs.managedExecutionFolder <boolean> (default value: true)
+#   description: Automatically organize results into subdirectories of 'results/all'?
+
+# --experimentConfigs.recordExecutionInfo <boolean> (default value: true)
+#   description: Record information such as timing, main class, code version, etc for this run?
+
+# --experimentConfigs.recordGitInfo <boolean> (default value: true)
+
+# --experimentConfigs.saveStandardStreams <boolean> (default value: true)
+#   description: Save combined standard out and err into a file?
+
+# --experimentConfigs.tabularWriter <TabularWriterFactory: CSV|Spark|fully qualified> (default value: CSV)
+
+# --initRandom <Random> (default value: 1)
+
+  --model demo.annualTemps$Builder    # <ModelBuilder: fully qualified>
+
+# --model.emissionProbabilities.file <File> (a parent is optional)
+#   description: CSV file where the first entry is the row index (starting at 0), the second is the col index (starting at 0), and the last is the value. Include the redundant ones, i.e. the sum of the read rows should be one..
+# ! Did not instantiate <java.io.File> because of missing input
+
+# --model.emissionProbabilities.nCols <Integer> (optional)
+
+# --model.emissionProbabilities.nRows <Integer> (optional)
+
+# --model.initialDistribution.file <File> (a parent is optional)
+#   description: CSV file where the first entry is the row index (starting at 0), the second is the value. Include the redundant entry, i.e. the sum of the read values should be one.
+# ! Did not instantiate <java.io.File> because of missing input
+
+# --model.initialDistribution.nCols <Integer> (optional)
+
+# --model.initialDistribution.nRows <Integer> (optional)
+
+# --model.nLatentStates <Integer> (optional)
+
+# --model.observations <List: Space separated items or "file <path>" to load from newline separated file> (optional)
+
+# --model.states <List: Space separated items or "file <path>" to load from newline separated file> (optional)
+
+# --model.transitionProbabilities.file <File> (a parent is optional)
+#   description: CSV file where the first entry is the row index (starting at 0), the second is the col index (starting at 0), and the last is the value. Include the redundant ones, i.e. the sum of the read rows should be one..
+# ! Did not instantiate <java.io.File> because of missing input
+
+# --model.transitionProbabilities.nCols <Integer> (optional)
+
+# --model.transitionProbabilities.nRows <Integer> (optional)
+
+# --printAccessibilityGraph <boolean> (default value: false)
+
+# --samplers.additional <SamplerSet: Fully qualified instances of blang.mcmc.Sampler>
+#   description: Samplers to be added.
+
+# --samplers.excluded <SamplerSet: Fully qualified instances of blang.mcmc.Sampler>
+#   description: Samplers to be excluded (only useful if useAnnotation = true).
+
+# --samplers.useAnnotation <boolean> (default value: true)
+#   description: If the arguments of the annotations @Samplers should be used to determine a starting set of sampler types.
+
+# --skipForwardSamplerConstruction <boolean> (default value: false)
+
+# --version <String> (optional)
+#   description: Version of the blang SDK to use (see https://github.com/UBC-Stat-ML/blangSDK/releases), of the form of a git tag x.y.z where x >= 2. If omitted, use the local SDK's 'master' version.

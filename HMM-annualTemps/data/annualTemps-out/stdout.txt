@@ -1,0 +1,11 @@
+Preprocessing started
+4 samplers constructed with following prototypes:
+IntScalar sampled via: []
+Categorical sampled via: [CategoricalSampler]
+Categorical sampled via: []
+Sampling started
+Change of measure complete [iter=134, Z=-4.633800222992608]
+Normalization constant estimate: -4.633800222992608
+Final rejuvenation started
+Preprocessing time: 61.64 ms
+Sampling time: 1.392 s
